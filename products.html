@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html>
+<head>
+    <div id="menu">
+        <a href="index.html"> 
+            <!-- Home link -->
+            Home
+        </div>
+    <title>Products</title> <!-- Defines the title of the document -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Links an external CSS file -->
+    <style>
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+        
+        #submenu {
+            text-align: center; 
+            padding-top: 50px; 
+            display: flex; 
+            justify-content: center; 
+        }
+        
+        #submenu a {
+            display: inline-block; 
+            padding: 10px; 
+            animation: spin 2s linear infinite; 
+            color: black; 
+            font-size: 20px; 
+        }
+        
+        svg {
+            width: 50px; 
+            height: 50px; 
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Submenu with links -->
+    <div id="submenu">
+        </a> |
+        <a href="shoes.html"> 
+            <!-- SVG for the Shoes link -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            Shoes
+        </a> |
+        <a href="clothes.html"> 
+            <!-- SVG for the Clothes link -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="4" x2="21" y2="4"></line>
+            </svg>
+            Clothes
+        </a>
+    </div>
+    <!-- Heading for the main content -->
+    <h1>What do We Offer?</h1>
+    <!-- Main content -->
+    <p>Welcome to our "Products" section, where we celebrate diversity and individuality in style. We are proud to offer a large variety of clothes and shoes, meticulously curated to cater to everyone's unique fashion sense and taste. 
+
+        Our collection is not just about covering up but about unveiling your personal style. We believe that every piece of clothing or pair of shoes is an opportunity to express yourself and to inspire others. 
+        
+        Whether you're a seasoned fashionista with a keen eye for the latest trends or someone who values comfort over couture, we've got you covered. Our range is as diverse as the people who wear them, ensuring that there's something for everyone.
+        
+        So, step into our world of fashion, where style meets substance, and discover the perfect ensemble that not only looks great but also feels like you.</p>
+</body>
+</html>

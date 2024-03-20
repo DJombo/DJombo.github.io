@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shoes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        body {
+            background-color: #D3D3D3; /* Change the background color to light grey */
+        }
+        .nav-menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-menu a {
+            display: inline-block;
+            padding: 10px;
+            color: black; 
+            font-size: 20px; 
+        }
+        .nav-menu svg {
+            animation: spin 2s linear infinite;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head> 
+<body>
+    <div class="nav-menu">
+        <a href="products.html" id="products-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Back to Products
+        </a>
+    </div>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="productsfile/dress1.png" alt="Hurmat">
+            <h2>Hurmat</h2>
+            <p>2000$</p>
+            <p>Elegance meets tradition in the Hurmat dress, featuring intricate embroidery and a timeless silhouette that pays homage to classic design.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="productsfile/dress2.png" alt="Ziba">
+            <h2>Ziba</h2>
+            <p>1700$</p>
+            <p>The Ziba dress is a testament to beauty in simplicity, with its sleek lines and understated grace making it a versatile addition to any wardrobe.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="productsfile/dress3.png" alt="Azadeh">
+            <h2>Azadeh</h2>
+            <p>2400$</p>
+            <p>Embrace freedom and elegance with the Azadeh dress, featuring a flowing form and delicate patterns inspired by nature's own artistry.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="productsfile/dress4.png" alt="Parmida">
+            <h2>Parmida</h2>
+            <p>2200$</p>
+            <p>The Parmida dress captures the essence of sophistication with its refined lace detailing and a silhouette that flatters every figure.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="productsfile/dress5.png" alt="Roxana">
+            <h2>Roxana</h2>
+            <p>1900$</p>
+            <p>Roxana combines modern chic with a touch of the exotic, featuring bold colors and patterns that make a statement wherever you go.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="productsfile/dress6.png" alt="Aygul">
+            <h2>Aygul</h2>
+            <p>2000$</p>
+            <p>The Aygul dress is a celebration of cultural fusion, blending contemporary design with motifs that tell a story of rich heritage.</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    
+        
+</body>
+</html>
