@@ -14,8 +14,7 @@ document.getElementById('feedback-link').addEventListener('click', function(even
       </form>
       <p id="result"></p>
       <script>
-        // This is the code for the new window
-        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+     document.getElementById('feedback-form').addEventListener('submit', function(event) {
           event.preventDefault();
           var name = document.getElementById('name').value;
           var email = document.getElementById('email').value;
