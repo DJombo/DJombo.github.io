@@ -1,0 +1,47 @@
+<! doctype html> 
+
+<html lang="Eng"> 
+
+<html> 
+
+<голова> 
+
+    <title>найти максимум три числа</title> 
+
+</голову> 
+
+<тело> 
+
+    <сценарий> 
+
+        Функция для нахождения максимального из трех чисел 
+
+        function findMax(x, y, z) { 
+
+            return Math.max(x, y, z); 
+
+        } 
+
+  
+
+        Числа: 
+
+        var x = 15;  
+
+        var y = 28;  
+
+        var z = 6;  
+
+  
+
+  
+
+        var maxNumber = findMax(x, y, z); 
+
+        document.write("Максимальное число: " + maxNumber); 
+
+    </скрипт> 
+
+</тело> 
+
+</html> 
