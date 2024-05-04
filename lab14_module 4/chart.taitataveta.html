@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart.js for lab 14</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <h1>Taita-Tatavera</h1>
+    <h2>Taita Hills Wildlife Sanctuary</h2>
+</head>
+
+<body>
+    
+    <img src="Coat_Taita_Taveta_County.png" alt="State Symbol">
+
+    <canvas id="Kenya_nature_reserves_chart" style="width:100%;max-width:700px"></canvas>
+    <script>
+       const data = [
+          { year: 1972, size:28000, income: 100, },
+          { year: 2023, size:28000, income: 10944, },
+       
+       ];
+
+       new Chart(document.getElementById('Kenya_nature_reserves_chart'), {
+          type: 'bar',
+          data: {
+            labels: data.map(row => row.year),
+            datasets: [
+              {
+                label: 'size of the nature reserve(in acres)',
+                data: data.map(row => row.size),
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', 
+                borderColor: 'rgba(75, 192, 192, 1)', 
+                borderWidth: 1 
+              },
+              {
+                label: 'Income(in USD)',
+                data: data.map(row => row.income),
+                backgroundColor: 'rgba(153, 102, 255, 0.2)', 
+                borderColor: 'rgba(153, 102, 255, 1)', 
+                borderWidth: 1 }
+            ]
+          },
+          options: {
+            animation: {
+              duration: 2000 
+            },
+            tooltips: {
+              enabled: true 
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
+          }
+       });
+    </script>
+</body>
+</html>
