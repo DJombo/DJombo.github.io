@@ -1,43 +1,43 @@
-<! doctype html> 
+ <! doctype html>
 
-<html lang="Eng"> 
+<html lang="Eng">
 
-<html> 
+<html>
 
-<тело> 
+<body>
 
- <h2>Вычислить произведение последовательности</h2> 
+  <h2>Calculate the product of a sequence</h2>
 
- <p>Введите натуральное число n:</p> 
+  <p>Enter a natural number n:</p>
 
   
 
-<input id="inputN" type="число" min="1"> 
+<input id="inputN" type="number" min="1">
 
- <button onclick="calculateProduct()">Calculate</button> 
+  <button onclick="calculateProduct()">Calculate</button>
 
- <p id="result"></p> 
+  <p id="result"></p>
 
- <сценарий> 
+  <script>
 
-function calculateProduct() { 
+function calculateProduct() {
 
-  var n = document.getElementById("inputN").value; 
+   var n = document.getElementById("inputN").value;
 
-  var произведение = 1; 
+   var product = 1;
 
-  for (var i = 0; i < n; i++) { 
+   for (var i = 0; i < n; i++) {
 
-    произведение *= (2*i + 1) / (2*i + 2); 
+     product *= (2*i + 1) / (2*i + 2);
 
-  } 
+   }
 
-  document.getElementById("result").innerHTML = "Произведение первых " + n + " членов последовательности: " + product; 
+   document.getElementById("result").innerHTML = "The product of the first " + n + " members of the sequence: " + product;
 
-} 
+}
 
-</скрипт> 
+</script>
 
- </тело> 
+  </body>
 
-</html> 
+</html>
