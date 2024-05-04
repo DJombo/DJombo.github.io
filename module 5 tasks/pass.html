@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkSecret() {
+            var secret = prompt("Enter secret word:");
+            if (secret == getCookie("secret")) {
+                alert("Secret data: " + getCookie("secretData"));
+            } else {
+                alert("Incorrect secret word.");
+            }
+        }
+
+        function submitForm() {
+            var uname = document.getElementById('uname').value;
+            var pwd = document.getElementById('pwd').value;
+            var secret = document.getElementById('secret').value;
+            var secretData = document.getElementById('secretData').value;
+
+            setCookie("username", uname, 2);
+            setCookie("password", pwd, 2);
+            setCookie("secret", secret, 2);
+            setCookie("secretData", secretData, 2);
+
+            alert("Cookies set. Expiration: " + (new Date().getTime() + (2*24*60*60*1000)));
+
+            return false; 
+        }
+
+        function checkExpiration() {
+            var expDate = new Date(getCookie("expires"));
+            if (expDate < new Date()) {
+                alert("Cookie has expired.");
+            } else {
+                alert("Cookie is still valid.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form action="" onsubmit="return submitForm()">
+  <label for="uname">Username:</label><br>
+  <input type="text" id="uname" name="uname"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br>
+  <label for="secret">Secret Word:</label><br>
+  <input type="text" id="secret" name="secret"><br>
+  <label for="secretData">Secret Data:</label><br>
+  <input type="text" id="secretData" name="secretData"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<button onclick="checkSecret()">Show Secret Data</button>
+<button onclick="checkExpiration()">Check Cookie Expiration</button>
+
+</body>
+</html>
+
+
